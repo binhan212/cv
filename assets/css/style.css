@@ -312,9 +312,9 @@ h3.my-profession{
 .home .home-img{
     flex: 0 00 40%;
     max-width: 40%;
+    height:400px;
     text-align: center;
     position: relative;
-
 }
 .home-img::after{
     content:"";
@@ -336,10 +336,93 @@ h3.my-profession{
     top: -40px;
     left:20px;
 }
+.home .home-img .sub-home-img{
+    height:375px;
+    width: 62%;
+    margin:auto;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    border-radius: 5px;
+    border:2px solid var(--bg-black-100);
+}
+.home .sub-home-img::before{
+    content:"";
+    position:absolute;
+    width: 80px;
+    height:140%;
+    background:linear-gradient(#00ccff,#d400d4);
+    animation:animate 30s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+.home .sub-home-img::after{
+    /* content:"";
+    position:absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height:360px;
+    margin:auto;
+    z-index: 11; */
+} 
+
+.home .sub-home-img:hover{
+    /* border:4px solid #6be1e6;
+    box-shadow: 0 0 20px #b4dce7; */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.home .sub-home-img:hover img{
+    transition: all 0.3s ease;
+    transform: scale(1.05);
+}
+.home .sub-home-img:hover.sub-home-img::after{
+    content:"";
+    position:absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height:375px;
+    margin:auto;
+    z-index: 11;
+}
+.home .sub-home-img:hover .sub-home-icon{
+    display: flex;
+    transition: all 0.3s ease;
+}
+.sub-home-icon{
+    width:100%;
+    height:400px;
+    margin:auto;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    z-index: 12;
+}
+.sub-home-icon i{
+    font-size: 26px;
+    color:red;
+    padding:10px 10px;
+    border-radius:25%;
+    box-shadow: 0 0 20px rgb(243, 124, 124);
+    margin:auto;
+
+}
+
+
 .home .home-img img{
+    position:absolute;
+    height:360px;
     margin:auto;
     border-radius: 5px;
-    height:400px;
+    z-index:10;
 }
 
 /* about */
