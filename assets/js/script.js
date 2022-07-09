@@ -1,6 +1,6 @@
 // typing animation
 var typed=new Typed(".typing",{
-    strings:["","Web Designer","Student","Farmer"],
+    strings:["","Web Developer","Sinh Viên"],
     typeSpeed:100,
     BackSpeed:60,
     loop:true
@@ -78,3 +78,11 @@ function asideSectionTogglerBtn(){
         allSection[i].classList.toggle("open");
     }
 }
+
+// service toggle
+var skillItemOrder=document.querySelector(".service-item-order");
+skillItemOrder.addEventListener("click",()=>{
+    var skillOrder=document.querySelector(".skill-order");
+    skillOrder.style.display="flex";
+
+})
