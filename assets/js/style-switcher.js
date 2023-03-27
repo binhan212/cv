@@ -22,7 +22,6 @@ function setActiveStyle(color){
             style.setAttribute("disabled","true");
         }
     });
-
 }
 
 // theme light and dark mode
